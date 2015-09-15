@@ -1,0 +1,26 @@
+---
+title: "Movement Data Analysis"
+author: "Andy Hasselwander"
+date: "September 15, 2015"
+output: html_document
+---
+
+#Loading and preprocessing the data
+First, load the data from the github repo. We download the zipped file and then unzip it.
+```{r}
+require(RCurl)
+temp <- tempfile()
+download.file("https://github.com/opencedar/RepData_PeerAssessment1/blob/master/activity.zip?raw=true", temp, method = "libcurl", mode="wb")
+unzip(temp, "activity.csv")
+moveData <- read.csv("activity.csv")
+```
+
+Now we can define the date column correctly.
+```{r}
+moveData$date <- as.Date(moveData$date, format=("%Y-%m-%d"))
+
+```
+
+#What is mean total number of steps taken per day?
+Histogram, mean, and median of the total number of steps taken per day.
+
