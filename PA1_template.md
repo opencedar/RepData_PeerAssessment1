@@ -105,7 +105,7 @@ print(intervalTable, type = "html")
 ```
 
 <!-- html table generated in R 3.2.1 by xtable 1.7-4 package -->
-<!-- Tue Sep 15 14:36:37 2015 -->
+<!-- Tue Sep 15 14:52:19 2015 -->
 <table border=1>
 <tr> <th>  </th> <th> interval </th> <th> avg_steps_by_interval </th>  </tr>
   <tr> <td align="right"> 1 </td> <td align="right"> 835 </td> <td align="right"> 206.17 </td> </tr>
@@ -212,3 +212,5 @@ p + facet_grid(. ~ weekendFactor)
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-12-1.png) 
+
+There is a clear difference in patterns between weekends and weekdays. On weekdays, steps start very abruptly at ~500, and then peak highly at 900--probably walking to work. Then, steps go down as people are sitting down for work. On weekdays, the distribution of steps in much more evenly distributed throughout the day.
